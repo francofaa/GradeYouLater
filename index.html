@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>GradeYouLater</title>
+</head>
+  <body>
+    <h1>A simple grading thingy</h1>
+    
+    <button id="add" onclick="addOne()">+1</button>
+    <button id="subtract" onclick="loseOne()">-1</button>
+
+    <form>
+    <input id="tally" type="text" text="numerator" name="tally" value="0" /> 
+    <hr />
+    <input id="totalPoints" type="text" text="denominator" name="totalPoints" value="Total points here"/>
+    </form>
+    
+    <button onclick="genGrade()" >Generate grade</button>
+    <button onclick="reset()">Reset tally</button>
+    <p id="grade">Grade: </p>
+    <script src="javascript.js"></script>
+  </body>
+</html>
