@@ -4,19 +4,28 @@
 </head>
   <body>
     <h1>A simple grading thingy</h1>
-    
+    <h2 id="grader">Grader</h2>
+
     <button id="add" onclick="addOne()">+1</button>
     <button id="subtract" onclick="loseOne()">-1</button>
 
     <form>
-    <input id="tally" type="text" text="numerator" name="tally" value="0" /> 
-    <hr />
-    <input id="totalPoints" type="text" text="denominator" name="totalPoints" value="Total points here"/>
+    Assignment name: <input id="assignment" type="text" text="assignment" name="assignment" value="" /><br />
+    Student name: <input id="studentName" type="text" text="studentName" name="studentName" value="" />   
+    <br />    
+    <input id="tally" type="text" text="numerator" name="tally" value="" /> / <input id="totalPoints" type="text" text="denominator" name="totalPoints" value=""/>
     </form>
     
     <button onclick="genGrade()" >Generate grade</button>
     <button onclick="reset()">Reset tally</button>
+    <button onclick="enterGrade()">Post to gradebook</button>
     <p id="grade">Grade: </p>
-    <script src="javascript.js"></script>
+    <h2>Gradebook
+    </h2>
+    <p id="gradebook">
+    </p>
+    
+    
+    <script src="functions.js"></script>
   </body>
 </html>
