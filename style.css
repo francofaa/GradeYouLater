@@ -19,7 +19,6 @@ nav.topnav {
   text-shadow: 0 1px 0 #919295;
   width: 100%;
   position: fixed;
-  height: 10px;
   margin-top: -119px;
   background-color: #2f3036;
 }
@@ -292,17 +291,32 @@ nav.topnav ul#menu li#copy {
 @media screen and (max-width: 580px) {
   table {
     width: 100%;
+    word-wrap: break-word;
+    font-size: 0.75em;
   }
   div#machine, div#gradebookContainer {
     border-radius: 0px;
   }
   button {
-    width: 100%;
+    width: 95%;
   }
   nav.topnav ul#menu li#copy {
    padding: 20px 20px;
   }
-  form input {
-    width: 100%;
+  input {
+    width: 95%;
   }
+  i.fa-file-text-o, i.fa-user {
+    display: none;
+  }
+  label {
+    font-size: 2.25em;
+  }
+  body {
+    padding-top: 90px;
+  }
+  nav.topnav {
+    margin-top: -89px;   
+  }
+
 }
