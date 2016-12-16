@@ -15,6 +15,4 @@ The user will be able to
 
 ## Origin
 
-I was helping my girlfriend grade her students' worksheets for her French class. We went section by section, tallied up the points, and took the points and got the percentage right. She then entered that grade into a gradebook. 
-
-I wanted to make a simple app that could tally the student's score one by one and figure out the percentage from the total, and after that I realized you could automate so much more. My next step is getting the thing to email you with a CSV spreadsheet file so that you could enter the grades in using whatever gradebook app you use.
+I was helping grade some French worksheets for my girlfriend, when I thought there must be an easier way<sup>TM</sup>. We were tallying scores per section, writing the tallied score at the end of the worksheet, taking the percentage using a calculator, and writing that percentage and grade at the end, which she would later have to enter into a grade book. So! This app should be able to tally, spit out a percentage, assign it to a student and class assignment, and put all that info into a table, which can then be exported to CSV.

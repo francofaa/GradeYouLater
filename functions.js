@@ -1,3 +1,4 @@
+// Our scores
 var num, den, dec;
 
 function addOne() {
@@ -8,6 +9,7 @@ function loseOne() {
   document.getElementById("tally").value--;
 }
 
+// Create the grade
 function genGrade() { 
   num = document.getElementById("tally").value;
   den = document.getElementById("totalPoints").value;
@@ -21,11 +23,13 @@ function genGrade() {
   
 }
 
-
+// Reset the score for the next student
 function reset() {
    document.getElementById("tally").value = 0;
+   document.getElementById("studentName").value = "";
 }
 
+// Make the gradebook array
 gradebookArray = [];
 
 function enterGrade() {
