@@ -5,37 +5,37 @@
   <title>GradeYouLater</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
   <meta name="viewport" content="width=device-width">
 </head>
   <body>
     <nav class="topnav">
     <input type="checkbox" id="show-menu" role="button">
-    <label for="show-menu" class="show-menu">GradeYouLater <i class="fa fa-navicon" aria-hidden="true"></i></label>
+    <label for="show-menu" class="show-menu">GradeYouLater <i class="fa fa-info-circle" aria-hidden="true"></i>
+ <br /><span class="smallish">built by Franco A. Alvarado</span></label>
     <ul id="menu">
+    <li id="copy">
+            GradeYouLater is a simple webpage to help you grade. Enter in the assignment and its total score and the student and their total score. Add one to the student's score by using the big plus and minus buttons. Generate a percentage grade and post the grade to a table at the bottom. You can export that table to a spreadsheet.
+        </li>
         <li>
-            <a href="/"><i class="fa fa-github" aria-hidden="true"></i> View on Github</span></a>
+            <a href="https://github.com/francofaa/GradeYouLater"><i class="fa fa-github" aria-hidden="true"></i> View on Github</span></a>
         </li>
         <li>
             <a href="http://francoalvarado.com/projects"><i class="fa fa-archive" aria-hidden="true"></i><span data-title="Projects"> More Projects</span></a>
         </li>
-        <a href="mailto:franco.faa@gmail.com?Subject=Change%20this%20subject%20line"><li id="contactme"><i class="fa fa-comments" aria-hidden="true"></i><span data-title="Contact Me"> Contact Me</span></li></a>
+        <a href="mailto:franco.faa@gmail.com?Subject=Change%20this%20subject%20line"><li id="contactme"><i class="fa fa-paper-plane" aria-hidden="true"></i><span data-title="Contact Me"> Contact Me</span></li></a>
+        
     </ul>
 </nav>
     <div id="machine">
-        <h1 id="grader"><i class="fa fa-check-square-o" aria-hidden="true"></i>
-GRADER</h1>
+        <h1 id="grader"><i class="fa fa-check-square-o" aria-hidden="true"></i> Tally</h1>
         <button id="add" onclick="addOne()"><i class="fa fa-plus" aria-hidden="true"></i>
 </button>
         <button id="subtract" onclick="loseOne()"><i class="fa fa-minus" aria-hidden="true"></i>
 </button>
 
         <form>
-        <i class="fa fa-file-text-o" aria-hidden="true"></i> <input id="assignment" type="text" text="assignment" name="assignment" placeholder="Assignment" value="" /><br />
-        <i class="fa fa-user" aria-hidden="true"></i> <input id="studentName" type="text" text="studentName" name="studentName" value="" placeholder="Student" />   
-        <br />    
-        <input id="tally" type="text" text="numerator" name="tally" value="" placeholder="tally"/> <i class="fa fa-cube" aria-hidden="true"></i>
-/ <i class="fa fa-cubes" aria-hidden="true"></i> <input id="totalPoints" type="text" text="denominator" name="totalPoints" value="" placeholder="total" /> 
-
+        <i class="fa fa-file-text-o" aria-hidden="true"></i> <input id="assignment" type="text" text="assignment" name="assignment" placeholder="Assignment" value="" /><br /><i class="fa fa-user" aria-hidden="true"></i> <input id="studentName" type="text" text="studentName" name="studentName" value="" placeholder="Student" /><br /><input id="tally" type="text" text="numerator" name="tally" value="" placeholder="tally"/> <i class="fa fa-cube" aria-hidden="true"></i> / <i class="fa fa-cubes" aria-hidden="true"></i> <input id="totalPoints" type="text" text="denominator" name="totalPoints" value="" placeholder="total" />
         </form>
         
         <button onclick="genGrade()" ><i class="fa fa-calculator" aria-hidden="true"></i>
@@ -50,19 +50,20 @@ Post to gradebook</button>
 Next student</button>
     </div>
     <div id="gradebookContainer">
-        <h1><i class="fa fa-table" aria-hidden="true"></i>
-GRADEBOOK </h1>
-        <button onclick="emailBook()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-Email as CSV</button>
-        <table id="gradebook">
-            <tr id="tableHead">
-                <th>NAME</th>
-                <th>ASSG</th>
-                <th>SCORE</th>
-                <th>GRADE</th>
-                <th>RAW SCORE</th>
-            </tr>
-        </table>
+        <h1><i class="fa fa-table" aria-hidden="true"></i> Gradebook </h1>
+        <a href="#" id ="export" role='button'><button onclick="emailBook()"><i class="fa fa-database" aria-hidden="true"></i>
+Save as CSV</button></a>
+        <div id="dvData">
+            <table id="gradebook">
+                <tr id="tableHead">
+                    <th>NAME</th>
+                    <th>ASSG</th>
+                    <th>SCORE</th>
+                    <th>GRADE</th>
+                    <th>RAW SCORE</th>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="functions.js"></script>
   </body>

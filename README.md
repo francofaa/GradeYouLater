@@ -16,3 +16,5 @@ The user will be able to
 ## Origin
 
 I was helping grade some French worksheets for my girlfriend, when I thought there must be an easier way<sup>TM</sup>. We were tallying scores per section, writing the tallied score at the end of the worksheet, taking the percentage using a calculator, and writing that percentage and grade at the end, which she would later have to enter into a grade book. So! This app should be able to tally, spit out a percentage, assign it to a student and class assignment, and put all that info into a table, which can then be exported to CSV.
+
+The table to CSV JQuery comes from here: https://bl.ocks.org/kalebdf/ee7a5e7f44416b2116c0
