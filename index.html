@@ -5,7 +5,7 @@
   <title>GradeYouLater</title>
 </head>
   <body>
-    <h1>A simple grading thingy</h1>
+    <h1>Grade You Later!</h1>
     <h2 id="grader">Grader</h2>
 
     <button id="add" onclick="addOne()">+1</button>
@@ -22,15 +22,18 @@
     <button onclick="reset()">Reset tally</button>
     <button onclick="enterGrade()">Post to gradebook</button>
     <p id="grade">Grade: </p>
-<<<<<<< HEAD
     <h2>Gradebook
     </h2>
-    <p id="gradebook">
-    </p>
-    
-    
-=======
->>>>>>> origin/master
+    <table id="gradebook">
+        <tr>
+            <th>Student</th>
+            <th>Assignment</th>
+            <th>Score</th>
+            <th>Grade</th>
+        </tr>
+    </table>
+    <button onclick="emailBook()">Email me gradebook as CSV</button>
+
     <script src="functions.js"></script>
   </body>
 </html>
