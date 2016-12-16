@@ -302,4 +302,7 @@ nav.topnav ul#menu li#copy {
   nav.topnav ul#menu li#copy {
    padding: 20px 20px;
   }
+  form input {
+    width: 100%;
+  }
 }
