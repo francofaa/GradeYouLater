@@ -1,0 +1,244 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0 auto;
+  text-align: center; 
+  padding-top: 100px;
+  text-shadow: 0.75px 1px 0.5px gray;
+  }
+
+label {
+  font-size: 2em;
+}
+
+nav.topnav {
+  z-index: 150;
+  text-shadow: 0 1px 0 #919295;
+  width: 100%;
+  position: fixed;
+  height: 10px;
+  margin-top: -100px;
+  background-color: #2f3036;
+  }
+  nav.topnav ul#menu {
+    list-style-type: none;
+    padding: 0;
+    position: absolute; }
+    nav.topnav ul#menu li {
+      display: inline-block;
+      float: left;
+      margin-right: 1px; }
+    nav.topnav ul#menu a, nav.topnav ul#menu li#contactme {
+      display: block;
+      min-width: 140px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-family: "Open Sans", Helvetica, sans-serif;
+      color: #f3f3f3;
+      background: #2f3036;
+      text-decoration: none; }
+      nav.topnav ul#menu a:hover, nav.topnav ul#menu li#contactme:hover {
+        background: #cc6600; }
+    nav.topnav ul#menu li#contactme {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      background-color: #ccaa00;
+      cursor: pointer; }
+      nav.topnav ul#menu li#contactme:hover {
+        background: light(#ccaa00, 20%); }
+  nav.topnav li:hover ul#menu a {
+    background: #f3f3f3;
+    color: #2f3036;
+    height: 40px;
+    line-height: 40px; }
+  nav.topnav li:hover ul#menu a:hover {
+    background: #ff9933;
+    color: #f3f3f3; }
+
+.show-menu {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-decoration: none;
+  color: #f3f3f3;
+  background: #0066cc;
+  text-align: center;
+  padding: 1.2em 0;
+  display: none; 
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none; 
+}
+
+input[type=checkbox]:checked ~ #menu {
+  display: block;
+}
+
+
+    nav.topnav ul#menu {
+      position: static;
+      display: none;
+      margin: 0; }
+    nav.topnav ul#menu li {
+      margin-bottom: 1px; }
+    nav.topnav ul#menu li, nav.topnav li a {
+      width: 100%; }
+    nav.topnav .show-menu {
+      display: block; }
+
+h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+h1#grader {
+}
+
+table {
+  margin: 2em auto;
+}
+
+form {
+ font-size: 1.5em;
+ margin: 0;
+}
+
+div#machine, div#gradebookContainer {
+  border-radius: 20px;
+  margin: 0 2px;
+  padding: 0.25em 0;
+  background-color: rgb(236, 208, 10);
+  box-shadow: -1px 1px 10px gray;
+}
+
+input#grade {
+  font-size: 3em;
+  background-color: aliceblue;
+  width: 3em;
+  margin: 0 auto;
+  text-align: right;
+}
+
+button {
+  border-radius: 5px;
+  line-height: 1.3;
+  transition: all 0.3s;
+  margin: 10px auto;
+  text-shadow: 0.75px 1px 0.5px #2f3036;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: white;
+  background: #2EBAE3;
+  border: 0px solid;
+  box-shadow: -1px 1.75px 4px gray;
+  overflow: visible;
+  cursor: pointer;
+  display: block;
+  width: 75%;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button:hover, button:focus{
+  background: #a3d8e7;
+}
+
+button:active {
+  background: #2A7F98;
+}
+
+button:focus {
+  outline-color: #a3d8e7;
+}
+
+#add, #subtract {
+  width: 2em;
+  padding: 0;
+  height: 2em;
+  font-size: 5em;
+  margin: 0.1em 0;
+  display: inline-block;
+}
+
+#add {
+  background: #57DB39;
+}
+#add:hover, #add:focus {
+  background: #b6f0a9;
+}
+
+#add:active {
+  background: #42ae2a;
+}
+
+#subtract {
+  background: #E74848;
+}
+
+#subtract:hover, #subtract:focus {
+  background: #f4a0a0;
+}
+
+#subtract:active {
+  background: #9a1b1b;
+}
+
+input {
+  width: 50%;
+  padding: 7px 7px;
+  margin: 8px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: solid 2px lightgray;
+  font-size: 1em;
+}
+
+input:focus {
+  background: #ffe6c7;
+  outline-color: lightgray;
+  border: 2px solid #2f3036;
+}
+
+#tally, #totalPoints {
+  width: 3em;
+}
+
+table {
+  width: 75%;
+  margin: 0 auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-shadow: 0.75px 1px 0.5px gray;
+  box-shadow: 0px 0px 10px gray;
+
+}
+
+tr {
+  background: #ffdeb6;
+
+}
+
+tr:nth-child(even) {
+  background: #ffae49;
+}
+
+tr#tableHead {
+  background: #c16b00;
+  color: white;
+}
+
+@media screen and (max-width: 580px) {
+  table {
+    width: 100%;
+  }
+  div#machine, div#gradebookContainer {
+    border-radius: 0px;
+  }
+}

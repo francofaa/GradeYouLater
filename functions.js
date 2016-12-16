@@ -1,5 +1,7 @@
 // Our scores
-var num, den, dec;
+var num, den;
+var dec = "!!";
+
 
 function addOne() {
   document.getElementById("tally").value++;
@@ -15,10 +17,10 @@ function genGrade() {
   den = document.getElementById("totalPoints").value;
   dec = +(((num / den) * 100).toFixed(2));
   if (isNaN(dec)) {
-    dec = "<i style='color: red;'>!!</i>"
-    document.getElementById("grade").innerHTML = "Please enter a number";
+    dec = "!!"
+    document.getElementById("grade").value = "Please enter a number";
   } else {
-    document.getElementById("grade").innerHTML = "Grade: " + dec + "%";
+    document.getElementById("grade").value = dec;
   }
   
 }
@@ -27,6 +29,9 @@ function genGrade() {
 function reset() {
    document.getElementById("tally").value = 0;
    document.getElementById("studentName").value = "";
+   document.getElementById('grade').innerHTML = "Grade:";
+   letter = "!!";
+   dec = "";
 }
 
 // Make the gradebook array
@@ -47,13 +52,14 @@ function enterGrade() {
     else if (dec < 60) {
       var letter = "F";
   } else {
-      var letter = "Please enter total points";
+      var letter = "!!";
   }
   gradebookArray.push({
     "student": document.getElementById('studentName').value,
     "assignment": document.getElementById('assignment').value,
     "score": dec,
-    "letter": letter
+    "letter": letter,
+    "tally": document.getElementById('tally').value
   });
     var table = document.getElementById('gradebook');
     var row = table.insertRow(1);
@@ -61,12 +67,22 @@ function enterGrade() {
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
     cell1.innerHTML = gradebookArray[gradebookArray.length - 1].student;
     cell2.innerHTML = gradebookArray[gradebookArray.length - 1].assignment;
-    cell3.innerHTML = gradebookArray[gradebookArray.length - 1].score;
+    if (isNaN(dec)) {
+      cell3.innerHTML = gradebookArray[gradebookArray.length - 1].score;
+    } else {
+      cell3.innerHTML = gradebookArray[gradebookArray.length - 1].score + "%";  
+    }
     cell4.innerHTML = gradebookArray[gradebookArray.length - 1].letter;
+    if (isNaN(num)) {
+      cell5.innerHTML = "!!";
+    } else {
+      cell5.innerHTML = gradebookArray[gradebookArray.length - 1].tally;
+    }
 }
 
-function emailBook() {
+function emailBook(table, filename) {
 
 }
