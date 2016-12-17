@@ -36,9 +36,9 @@ nav.topnav ul#menu a, nav.topnav ul#menu li#contactme, nav.topnav li:hover ul#me
   line-height: 50px;
   font-family: "Open Sans", Helvetica, sans-serif;
   color: #2f3036;
-  background: -webkit-linear-gradient(left, #b9deed, #efefef);
-  background: -o-linear-gradient(left, #b9deed, #efefef);
-  background: linear-gradient(to right, #b9deed, #efefef);
+  background: -webkit-linear-gradient(right, #aea4e3, #d3ffe8);
+  background: -o-linear-gradient(right, #aea4e3, #d3ffe8);
+  background: linear-gradient(to left, #aea4e3, #d3ffe8);
   text-decoration: none; 
 }
 
@@ -55,7 +55,7 @@ nav.topnav ul#menu li#contactme {
   cursor: pointer; 
 }
 
-.show-menu {
+.showMenu {
 font-family: "Open Sans", Helvetica, sans-serif;
 text-decoration: none;
 color: #f3f3f3;
@@ -97,7 +97,7 @@ nav.topnav ul#menu li, nav.topnav li a {
   width: 100%; 
   box-shadow: inset 0px 0px 1px gray;
 }
-nav.topnav .show-menu {
+nav.topnav .showMenu {
   display: block; }
 
 h1 {
@@ -155,7 +155,7 @@ div#gradebookContainer h1 {
 input#grade {
   font-size: 3em;
   background-color: aliceblue;
-  width: 3em;
+  width: 3.5em;
   margin: 0 auto;
   text-align: right;
 }
@@ -275,17 +275,36 @@ td, th {
   padding: 10px;
 }
 
-nav.topnav ul#menu li#copy {
+nav.topnav ul#menu li#copy, nav.topnav ul#menu li.pay a {
   height: 100%;
   line-height: 1;
-  padding: 20px 150px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
   width: auto;
-  max-width: 1200px;
-  background: -webkit-linear-gradient(left, #b9deed, #efefef);
-  background: -o-linear-gradient(left, #b9deed, #efefef);
-  background: linear-gradient(to right, #b9deed, #efefef);
+  padding: 20px;
+  background: -moz-linear-gradient(359deg, #B2DB40 0%, #00960D 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #B2DB40), color-stop(100%, #00960D)); /* safari4+,chrome */
+  background: -webkit-linear-gradient(359deg, #B2DB40 0%, #00960D 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(359deg, #B2DB40 0%, #00960D 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(359deg, #B2DB40 0%, #00960D 100%); /* ie10+ */
+  background: linear-gradient(91deg, #B2DB40 0%, #00960D 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B2DB40', endColorstr='#00960D',GradientType=1 ); /* ie6-9 */
+}
+
+nav.topnav ul#menu li.pay a:hover {
+  background: -moz-linear-gradient(180deg, #DBB127 0%, #5AA30B 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, #5AA30B), color-stop(100%, #DBB127)); /* safari4+,chrome */
+background: -webkit-linear-gradient(180deg, #DBB127 0%, #5AA30B 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(180deg, #DBB127 0%, #5AA30B 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(180deg, #DBB127 0%, #5AA30B 100%); /* ie10+ */
+background: linear-gradient(270deg, #DBB127 0%, #5AA30B 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5AA30B', endColorstr='#DBB127',GradientType=1 ); /* ie6-9 */
+}
+
+nav.topnav ul#menu li#copy {
+  text-align: left;
+  padding: 20px 150px;
+  background: lightgray;
 }
 
 @media screen and (max-width: 580px) {
