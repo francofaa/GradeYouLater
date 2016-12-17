@@ -1,17 +1,17 @@
 # GradeYouLater
 I wanted to create a simple grading system, hopefully to inevitably turn it into an app.
 
-## Goals
-The user will be able to
+## Purpose
+The user can
 
-- Set an assignment
+- Name an assignment
 - Ascribe a point value to that assignment
 - Enter in a student's name
 - Increment the student's score by 1 as the user goes through grading the assignment
 - Decrement in case of error
 - Render a percentage grade based on the score
-- Push the score, assignment, and associate student to a list
-- Export that list to CSV or another format for entering into a gradebook
+- Push the score, assignment, percentage grade, letter grade, and associated student to a table
+- Export that table to CSV for entering into a gradebook
 
 ## Origin
 
