@@ -1,3 +1,5 @@
+//changing this to a JQUERY thing
+
 // Our scores
 var num, den;
 var dec = "!!";
